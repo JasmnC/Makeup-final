@@ -28,13 +28,12 @@ public class memberPanel extends javax.swing.JPanel {
 
         btnRequestManager = new javax.swing.JButton();
         btnViewPayment = new javax.swing.JButton();
-        btnBookCardioClass = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btnBookPersonalTraining = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnRequestManager.setText("Request My Manager");
+        btnRequestManager.setText("My Information");
         btnRequestManager.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRequestManagerActionPerformed(evt);
@@ -50,14 +49,6 @@ public class memberPanel extends javax.swing.JPanel {
             }
         });
         add(btnViewPayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 200, 40));
-
-        btnBookCardioClass.setText("Book a Cardio Class");
-        btnBookCardioClass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBookCardioClassActionPerformed(evt);
-            }
-        });
-        add(btnBookCardioClass, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 220, 200, 40));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         btnBookPersonalTraining.setText("Book a Personal Trainer");
@@ -66,16 +57,12 @@ public class memberPanel extends javax.swing.JPanel {
                 btnBookPersonalTrainingActionPerformed(evt);
             }
         });
-        add(btnBookPersonalTraining, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 270, 200, 40));
+        add(btnBookPersonalTraining, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 200, 40));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRequestManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestManagerActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_btnRequestManagerActionPerformed
-
-    private void btnBookCardioClassActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBookCardioClassActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnBookCardioClassActionPerformed
 
     private void btnViewPaymentActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewPaymentActionPerformed
         // TODO add your handling code here:
@@ -87,7 +74,6 @@ public class memberPanel extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBookCardioClass;
     private javax.swing.JButton btnBookPersonalTraining;
     private javax.swing.JButton btnRequestManager;
     private javax.swing.JButton btnViewPayment;

@@ -5,6 +5,7 @@
 package model.Network;
 
 import model.Enterprise.EnterpriseDirectory;
+import model.System.EcoSystem;
 import model.WorkQueue.WorkQueue;
 
 /**
@@ -15,13 +16,13 @@ public class Network {
     
     private String name;
     private EnterpriseDirectory enterpriseDirectory;
-    private System system;
+    private EcoSystem ecoSystem;
     private WorkQueue workQueue;
 
     
-    public Network(String name, System ecoSystem) {
+    public Network(String name, EcoSystem ecoSystem) {
         this.name = name;
-        this.system = system;
+        this.ecoSystem = ecoSystem;
         this.workQueue = new WorkQueue();
         enterpriseDirectory = new EnterpriseDirectory();
     }
@@ -37,17 +38,17 @@ public class Network {
     public EnterpriseDirectory getEnterpriseDirectory() {
         return enterpriseDirectory;
     }
-
+//no setter in origin
     public void setEnterpriseDirectory(EnterpriseDirectory enterpriseDirectory) {
         this.enterpriseDirectory = enterpriseDirectory;
     }
 
-    public System getSystem() {
-        return system;
+    public EcoSystem getEcoSystem() {
+        return ecoSystem;
     }
-
-    public void setSystem(System system) {
-        this.system = system;
+//no setter in origin
+    public void setEcoSystem(EcoSystem ecoSystem) {
+        this.ecoSystem = ecoSystem;
     }
 
     public WorkQueue getWorkQueue() {
@@ -60,3 +61,12 @@ public class Network {
     
     
 }
+
+
+//
+//    @Override
+//    public String toString() {
+//        return name;
+//    }    
+//
+
