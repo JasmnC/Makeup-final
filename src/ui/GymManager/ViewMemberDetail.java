@@ -2,9 +2,11 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package ui.GymMember;
+package ui.GymManager;
 
+import ui.GymMember.*;
 import java.awt.Image;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -15,12 +17,12 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author yuujadz
  */
-public class myInformation extends javax.swing.JPanel {
+public class viewMemberDetail extends javax.swing.JPanel {
 
     /**
      * Creates new form requestManager
      */
-    public myInformation() {
+    public viewMemberDetail() {
         initComponents();
     }
 
@@ -49,7 +51,7 @@ public class myInformation extends javax.swing.JPanel {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
-        btnCreate = new javax.swing.JButton();
+        btnUpdate = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         lblImage = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
@@ -59,10 +61,6 @@ public class myInformation extends javax.swing.JPanel {
         txtHeight = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        txtMobile1 = new javax.swing.JTextField();
-        jLabel15 = new javax.swing.JLabel();
-        txtMobile2 = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -143,14 +141,14 @@ public class myInformation extends javax.swing.JPanel {
         jRadioButton3.setText("F");
         add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 50, -1));
 
-        btnCreate.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        btnCreate.setText("Create");
-        btnCreate.addActionListener(new java.awt.event.ActionListener() {
+        btnUpdate.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        btnUpdate.setText("Update");
+        btnUpdate.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateActionPerformed(evt);
+                btnUpdateActionPerformed(evt);
             }
         });
-        add(btnCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, 100, 50));
+        add(btnUpdate, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 420, 100, 50));
 
         jButton2.setText("Upload");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
@@ -170,8 +168,8 @@ public class myInformation extends javax.swing.JPanel {
         add(txtUserName, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 140, 190, 30));
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
-        jLabel2.setText("My Information");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, -1, -1));
+        jLabel2.setText("Member Detail");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 60, -1, -1));
 
         txtWeight.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -195,18 +193,6 @@ public class myInformation extends javax.swing.JPanel {
         jLabel10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel10.setText("Weight:");
         add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, 100, -1));
-        add(txtMobile1, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 420, 290, 70));
-
-        jLabel15.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel15.setText("Comment from personal trainer:");
-        add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 400, 270, 20));
-        add(txtMobile2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 420, 290, 70));
-
-        jLabel16.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel16.setText("Comment from fittness consultant:");
-        add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 270, 20));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAreaActionPerformed
@@ -262,71 +248,69 @@ public class myInformation extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtWeightKeyPressed
 
-    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
+    private void btnUpdateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUpdateActionPerformed
         // TODO add your handling code here:
 
-        if(txtArea.getText().equals("")||txtAge.getText().equals("")){
-            JOptionPane.showMessageDialog(this, "Please fill in all the blanks.");
-        }else{
-
-            String name = txtName.getText();
-            String department = txtUserName.getText();
-            long id = Long.parseLong(txtArea.getText());
-            int age = Integer.parseInt(txtAge.getText());
-            String gender = getButtonGroupText(buttonGroup1);
-            String startDate = txtStartDate.getText();
-            String level = txtLevel.getText();
-            String title = txtTitle.getText();
-            String supervisor = txtSupervisor.getText();
-            String mobile = txtMobile.getText();
-            String email = txtEmail.getText();
-            ImageIcon photo = (ImageIcon)lblImage.getIcon();
-
-            if(name.equals("")||department.equals("")||startDate.equals("")||level.equals("")||
-                title.equals("")||supervisor.equals("")||mobile.equals("")||email.equals("")){
-
-                JOptionPane.showMessageDialog(this, "Please fill in all the blanks.");
-
-            }else{
-
-                Employee e= employeeDirectory.addNewEmployee();
-
-                e.setName(name);
-                e.setDepartment(department);
-                e.setId(id);
-                e.setAge(age);
-                e.setGender(gender);
-                e.setStartday(startDate);
-                e.setLevel(level);
-                e.setTitle(title);
-                e.setSupervisor(supervisor);
-                e.setMobile(mobile);
-                e.setEmail(email);
-                e.setImage(photo);
-
-                JOptionPane.showMessageDialog(this, "New Information Added");
-
-                txtAge.setText("");
-                txtUserName.setText("");
-                txtEmail.setText("");
-                txtArea.setText("");
-                txtMobile.setText("");
-                txtName.setText("");
-                lblImage.setIcon(null);
-            }
-        }
-    }//GEN-LAST:event_btnCreateActionPerformed
+//        if(txtArea.getText().equals("")||txtAge.getText().equals("")){
+//            JOptionPane.showMessageDialog(this, "Please fill in all the blanks.");
+//        }else{
+//
+//            String name = txtName.getText();
+//            String department = txtUserName.getText();
+//            long id = Long.parseLong(txtArea.getText());
+//            int age = Integer.parseInt(txtAge.getText());
+//            String gender = getButtonGroupText(buttonGroup1);
+//            String startDate = txtStartDate.getText();
+//            String level = txtLevel.getText();
+//            String title = txtTitle.getText();
+//            String supervisor = txtSupervisor.getText();
+//            String mobile = txtMobile.getText();
+//            String email = txtEmail.getText();
+//            ImageIcon photo = (ImageIcon)lblImage.getIcon();
+//
+//            if(name.equals("")||department.equals("")||startDate.equals("")||level.equals("")||
+//                title.equals("")||supervisor.equals("")||mobile.equals("")||email.equals("")){
+//
+//                JOptionPane.showMessageDialog(this, "Please fill in all the blanks.");
+//
+//            }else{
+//
+//                Employee e= employeeDirectory.addNewEmployee();
+//
+//                e.setName(name);
+//                e.setDepartment(department);
+//                e.setId(id);
+//                e.setAge(age);
+//                e.setGender(gender);
+//                e.setStartday(startDate);
+//                e.setLevel(level);
+//                e.setTitle(title);
+//                e.setSupervisor(supervisor);
+//                e.setMobile(mobile);
+//                e.setEmail(email);
+//                e.setImage(photo);
+//
+//                JOptionPane.showMessageDialog(this, "New Information Added");
+//
+//                txtAge.setText("");
+//                txtUserName.setText("");
+//                txtEmail.setText("");
+//                txtArea.setText("");
+//                txtMobile.setText("");
+//                txtName.setText("");
+//                lblImage.setIcon(null);
+//            }
+//        }
+    }//GEN-LAST:event_btnUpdateActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnCreate;
+    private javax.swing.JButton btnUpdate;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -344,8 +328,6 @@ public class myInformation extends javax.swing.JPanel {
     private javax.swing.JTextField txtEmail;
     private javax.swing.JTextField txtHeight;
     private javax.swing.JTextField txtMobile;
-    private javax.swing.JTextField txtMobile1;
-    private javax.swing.JTextField txtMobile2;
     private javax.swing.JTextField txtName;
     private javax.swing.JTextField txtUserName;
     private javax.swing.JTextField txtWeight;

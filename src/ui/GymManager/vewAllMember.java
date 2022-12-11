@@ -8,12 +8,12 @@ package ui.GymManager;
  *
  * @author yuujadz
  */
-public class managmentRequest extends javax.swing.JPanel {
+public class vewAllMember extends javax.swing.JPanel {
 
     /**
      * Creates new form managmentRequest
      */
-    public managmentRequest() {
+    public vewAllMember() {
         initComponents();
     }
 
@@ -28,8 +28,9 @@ public class managmentRequest extends javax.swing.JPanel {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         tblManagerRequests = new javax.swing.JTable();
-        btnAssignToMe = new javax.swing.JButton();
+        btnRequestFittnessConsult = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        btnRequestFittnessConsult1 = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -48,27 +49,40 @@ public class managmentRequest extends javax.swing.JPanel {
 
         add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 90, -1, 320));
 
-        btnAssignToMe.setText("Assign to Me");
-        btnAssignToMe.addActionListener(new java.awt.event.ActionListener() {
+        btnRequestFittnessConsult.setText("Delete");
+        btnRequestFittnessConsult.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnAssignToMeActionPerformed(evt);
+                btnRequestFittnessConsultActionPerformed(evt);
             }
         });
-        add(btnAssignToMe, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 430, -1, -1));
+        add(btnRequestFittnessConsult, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 430, 100, -1));
 
         jLabel1.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
-        jLabel1.setText("Manager Requests");
+        jLabel1.setText("View Members");
         jLabel1.setToolTipText("");
-        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(275, 40, -1, -1));
+        add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(285, 40, -1, -1));
+
+        btnRequestFittnessConsult1.setText("View");
+        btnRequestFittnessConsult1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRequestFittnessConsult1ActionPerformed(evt);
+            }
+        });
+        add(btnRequestFittnessConsult1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 100, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnAssignToMeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAssignToMeActionPerformed
+    private void btnRequestFittnessConsultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestFittnessConsultActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnAssignToMeActionPerformed
+    }//GEN-LAST:event_btnRequestFittnessConsultActionPerformed
+
+    private void btnRequestFittnessConsult1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestFittnessConsult1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnRequestFittnessConsult1ActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnAssignToMe;
+    private javax.swing.JButton btnRequestFittnessConsult;
+    private javax.swing.JButton btnRequestFittnessConsult1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable tblManagerRequests;

@@ -28,42 +28,42 @@ public class gymManagerPanel extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        btnViewManagementRequest = new javax.swing.JButton();
-        btnViewMyMemeber = new javax.swing.JButton();
+        btnAddNewMember = new javax.swing.JButton();
+        btnViewMemeber = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        btnViewManagementRequest.setText("View Management Requests");
-        btnViewManagementRequest.addActionListener(new java.awt.event.ActionListener() {
+        btnAddNewMember.setText("Add New Member");
+        btnAddNewMember.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewManagementRequestActionPerformed(evt);
+                btnAddNewMemberActionPerformed(evt);
             }
         });
-        add(btnViewManagementRequest, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 200, 40));
+        add(btnAddNewMember, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 200, 200, 40));
 
-        btnViewMyMemeber.setText("View My Member");
-        btnViewMyMemeber.addActionListener(new java.awt.event.ActionListener() {
+        btnViewMemeber.setText("View Member");
+        btnViewMemeber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnViewMyMemeberActionPerformed(evt);
+                btnViewMemeberActionPerformed(evt);
             }
         });
-        add(btnViewMyMemeber, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 200, 40));
+        add(btnViewMemeber, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 200, 40));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
-    private void btnViewManagementRequestActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewManagementRequestActionPerformed
+    private void btnAddNewMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddNewMemberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnViewManagementRequestActionPerformed
+    }//GEN-LAST:event_btnAddNewMemberActionPerformed
 
-    private void btnViewMyMemeberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewMyMemeberActionPerformed
+    private void btnViewMemeberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewMemeberActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnViewMyMemeberActionPerformed
+    }//GEN-LAST:event_btnViewMemeberActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnViewManagementRequest;
-    private javax.swing.JButton btnViewMyMemeber;
+    private javax.swing.JButton btnAddNewMember;
+    private javax.swing.JButton btnViewMemeber;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
