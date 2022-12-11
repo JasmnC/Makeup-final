@@ -31,6 +31,7 @@ public class vewAllMember extends javax.swing.JPanel {
         btnRequestFittnessConsult = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btnRequestFittnessConsult1 = new javax.swing.JButton();
+        btnBack = new javax.swing.JButton();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -69,6 +70,9 @@ public class vewAllMember extends javax.swing.JPanel {
             }
         });
         add(btnRequestFittnessConsult1, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 430, 100, -1));
+
+        btnBack.setText("<<back");
+        add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRequestFittnessConsultActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestFittnessConsultActionPerformed
@@ -81,6 +85,7 @@ public class vewAllMember extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnBack;
     private javax.swing.JButton btnRequestFittnessConsult;
     private javax.swing.JButton btnRequestFittnessConsult1;
     private javax.swing.JLabel jLabel1;

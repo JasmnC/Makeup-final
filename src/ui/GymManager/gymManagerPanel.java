@@ -31,6 +31,7 @@ public class gymManagerPanel extends javax.swing.JPanel {
         btnAddNewMember = new javax.swing.JButton();
         btnViewMemeber = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -50,6 +51,11 @@ public class gymManagerPanel extends javax.swing.JPanel {
         });
         add(btnViewMemeber, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 250, 200, 40));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+
+        jLabel3.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel3.setText("Gym Manager Work Panel");
+        jLabel3.setToolTipText("");
+        add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 60, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnAddNewMemberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAddNewMemberActionPerformed
@@ -65,5 +71,6 @@ public class gymManagerPanel extends javax.swing.JPanel {
     private javax.swing.JButton btnAddNewMember;
     private javax.swing.JButton btnViewMemeber;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel3;
     // End of variables declaration//GEN-END:variables
 }

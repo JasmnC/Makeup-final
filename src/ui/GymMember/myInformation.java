@@ -5,6 +5,7 @@
 package ui.GymMember;
 
 import java.awt.Image;
+import java.awt.event.KeyEvent;
 import java.io.File;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
@@ -49,8 +50,6 @@ public class myInformation extends javax.swing.JPanel {
         jRadioButton1 = new javax.swing.JRadioButton();
         jRadioButton2 = new javax.swing.JRadioButton();
         jRadioButton3 = new javax.swing.JRadioButton();
-        btnCreate = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
         lblImage = new javax.swing.JLabel();
         txtName = new javax.swing.JTextField();
         txtUserName = new javax.swing.JTextField();
@@ -63,6 +62,8 @@ public class myInformation extends javax.swing.JPanel {
         jLabel15 = new javax.swing.JLabel();
         txtMobile2 = new javax.swing.JTextField();
         jLabel16 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        lblImage1 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -79,7 +80,7 @@ public class myInformation extends javax.swing.JPanel {
         jLabel4.setText("Photo:");
         jLabel4.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
         jLabel4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 110, -1, -1));
+        add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 120, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jLabel5.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
@@ -142,23 +143,6 @@ public class myInformation extends javax.swing.JPanel {
 
         jRadioButton3.setText("F");
         add(jRadioButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 300, 50, -1));
-
-        btnCreate.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
-        btnCreate.setText("Create");
-        btnCreate.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCreateActionPerformed(evt);
-            }
-        });
-        add(btnCreate, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, 100, 50));
-
-        jButton2.setText("Upload");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-        add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 100, -1, -1));
         add(lblImage, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 140, 160, 190));
 
         txtName.addActionListener(new java.awt.event.ActionListener() {
@@ -207,6 +191,14 @@ public class myInformation extends javax.swing.JPanel {
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         jLabel16.setText("Comment from fittness consultant:");
         add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 400, 270, 20));
+
+        jLabel11.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
+        jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jLabel11.setText("Inbody:");
+        jLabel11.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel11.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, -1, -1));
+        add(lblImage1, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, 160, 190));
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtAreaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtAreaActionPerformed
@@ -233,23 +225,6 @@ public class myInformation extends javax.swing.JPanel {
         }
     }//GEN-LAST:event_txtAgeKeyPressed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        JFileChooser fileChooser = new JFileChooser();
-        FileNameExtensionFilter filter = new FileNameExtensionFilter("4 Extension Suppported", "jpg", "png", "jpeg", "gif");
-        fileChooser.setFileFilter(filter);
-        int selected = fileChooser.showOpenDialog(this);
-        if (selected == JFileChooser.APPROVE_OPTION) {
-            File file = fileChooser.getSelectedFile();
-            ImageIcon imIco = new ImageIcon(file.toString());
-            Image imFit = imIco.getImage();
-            Image imgFit = imFit.getScaledInstance(lblImage.getWidth(), lblImage.getHeight(), Image.SCALE_SMOOTH);
-
-            lblImage.setIcon(new ImageIcon(imgFit));
-
-        }
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
-
     private void txtNameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtNameActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtNameActionPerformed
@@ -262,67 +237,11 @@ public class myInformation extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtWeightKeyPressed
 
-    private void btnCreateActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCreateActionPerformed
-        // TODO add your handling code here:
-
-        if(txtArea.getText().equals("")||txtAge.getText().equals("")){
-            JOptionPane.showMessageDialog(this, "Please fill in all the blanks.");
-        }else{
-
-            String name = txtName.getText();
-            String department = txtUserName.getText();
-            long id = Long.parseLong(txtArea.getText());
-            int age = Integer.parseInt(txtAge.getText());
-            String gender = getButtonGroupText(buttonGroup1);
-            String startDate = txtStartDate.getText();
-            String level = txtLevel.getText();
-            String title = txtTitle.getText();
-            String supervisor = txtSupervisor.getText();
-            String mobile = txtMobile.getText();
-            String email = txtEmail.getText();
-            ImageIcon photo = (ImageIcon)lblImage.getIcon();
-
-            if(name.equals("")||department.equals("")||startDate.equals("")||level.equals("")||
-                title.equals("")||supervisor.equals("")||mobile.equals("")||email.equals("")){
-
-                JOptionPane.showMessageDialog(this, "Please fill in all the blanks.");
-
-            }else{
-
-                Employee e= employeeDirectory.addNewEmployee();
-
-                e.setName(name);
-                e.setDepartment(department);
-                e.setId(id);
-                e.setAge(age);
-                e.setGender(gender);
-                e.setStartday(startDate);
-                e.setLevel(level);
-                e.setTitle(title);
-                e.setSupervisor(supervisor);
-                e.setMobile(mobile);
-                e.setEmail(email);
-                e.setImage(photo);
-
-                JOptionPane.showMessageDialog(this, "New Information Added");
-
-                txtAge.setText("");
-                txtUserName.setText("");
-                txtEmail.setText("");
-                txtArea.setText("");
-                txtMobile.setText("");
-                txtName.setText("");
-                lblImage.setIcon(null);
-            }
-        }
-    }//GEN-LAST:event_btnCreateActionPerformed
-
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBack;
-    private javax.swing.JButton btnCreate;
-    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
@@ -339,6 +258,7 @@ public class myInformation extends javax.swing.JPanel {
     private javax.swing.JRadioButton jRadioButton2;
     private javax.swing.JRadioButton jRadioButton3;
     private javax.swing.JLabel lblImage;
+    private javax.swing.JLabel lblImage1;
     private javax.swing.JTextField txtAge;
     private javax.swing.JTextField txtArea;
     private javax.swing.JTextField txtEmail;

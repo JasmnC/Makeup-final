@@ -29,7 +29,8 @@ public class memberPanel extends javax.swing.JPanel {
         btnRequestManager = new javax.swing.JButton();
         btnViewPayment = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
-        btnBookPersonalTraining = new javax.swing.JButton();
+        btnRequestPersonalTrainer = new javax.swing.JButton();
+        jLabel2 = new javax.swing.JLabel();
 
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -51,13 +52,18 @@ public class memberPanel extends javax.swing.JPanel {
         add(btnViewPayment, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 200, 40));
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
-        btnBookPersonalTraining.setText("Book a Personal Trainer");
-        btnBookPersonalTraining.addActionListener(new java.awt.event.ActionListener() {
+        btnRequestPersonalTrainer.setText("Request Personal Trainer");
+        btnRequestPersonalTrainer.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnBookPersonalTrainingActionPerformed(evt);
+                btnRequestPersonalTrainerActionPerformed(evt);
             }
         });
-        add(btnBookPersonalTraining, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 200, 40));
+        add(btnRequestPersonalTrainer, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 240, 200, 40));
+
+        jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 18)); // NOI18N
+        jLabel2.setText("Member Panel");
+        jLabel2.setToolTipText("");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 80, -1, -1));
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnRequestManagerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestManagerActionPerformed
@@ -68,15 +74,16 @@ public class memberPanel extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnViewPaymentActionPerformed
 
-    private void btnBookPersonalTrainingActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBookPersonalTrainingActionPerformed
+    private void btnRequestPersonalTrainerActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRequestPersonalTrainerActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_btnBookPersonalTrainingActionPerformed
+    }//GEN-LAST:event_btnRequestPersonalTrainerActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnBookPersonalTraining;
     private javax.swing.JButton btnRequestManager;
+    private javax.swing.JButton btnRequestPersonalTrainer;
     private javax.swing.JButton btnViewPayment;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     // End of variables declaration//GEN-END:variables
 }

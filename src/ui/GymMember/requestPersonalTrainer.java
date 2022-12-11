@@ -16,12 +16,12 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author yuujadz
  */
-public class processPayment extends javax.swing.JPanel {
+public class requestPersonalTrainer extends javax.swing.JPanel {
 
     /**
      * Creates new form requestManager
      */
-    public processPayment() {
+    public requestPersonalTrainer() {
         initComponents();
     }
 
@@ -46,16 +46,16 @@ public class processPayment extends javax.swing.JPanel {
         add(btnBack, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, -1, -1));
 
         jLabel2.setFont(new java.awt.Font("Lucida Grande", 0, 20)); // NOI18N
-        jLabel2.setText("Process Payment");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 60, -1, -1));
+        jLabel2.setText("Request Personal Trainer");
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, -1, -1));
         add(txtMobile2, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 190, 420, 120));
 
         jLabel16.setFont(new java.awt.Font("Lucida Grande", 0, 14)); // NOI18N
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        jLabel16.setText("Recipt No.:");
+        jLabel16.setText("Message:");
         add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 90, 20));
 
-        btnRequestFittnessConsult1.setText("comfirm");
+        btnRequestFittnessConsult1.setText("Request");
         btnRequestFittnessConsult1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRequestFittnessConsult1ActionPerformed(evt);
