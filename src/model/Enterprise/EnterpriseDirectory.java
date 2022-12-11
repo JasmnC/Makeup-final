@@ -31,16 +31,16 @@ public class EnterpriseDirectory {
             enterprise = new MemberEnterprise(name);
             enterpriseList.add(enterprise);
         } 
-        else if (type.getValue().equals(Enterprise.Type.MedicalCare.getValue())) {
-            enterprise = new MedicalCareEnterprise(name);
+        else if (type.getValue().equals(Enterprise.Type.PhysicalTherapistEnterprise.getValue())) {
+            enterprise = new PhysicalTherapistEnterprise(name);
             enterpriseList.add(enterprise);
         } 
-        else if (type.getValue().equals(Enterprise.Type.Adoption.getValue())) {
-            enterprise = new AdoptionEnterprise(name);
+        else if (type.getValue().equals(Enterprise.Type.TrainingEnterprise.getValue())) {
+            enterprise = new TrainingEnterprise(name);
             enterpriseList.add(enterprise);
         }
-        else if (type.getValue().equals(Enterprise.Type.Volunteer.getValue())) {
-            enterprise = new VolunteerEnterprise(name);
+        else if (type.getValue().equals(Enterprise.Type.FinanceEnterprise.getValue())) {
+            enterprise = new FinanceEnterprise(name);
             enterpriseList.add(enterprise);
         }
 

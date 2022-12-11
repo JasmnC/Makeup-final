@@ -20,7 +20,7 @@ public class NewSystem {
              
         UserAccount account = new UserAccount();
         account.setUsername("admin");
-        account.setPassword("admin");
+        account.setPassword("0000");
         account.setRole(new SystemAdminRole());
         
         ecoSystem.setSystemAdmin(account);

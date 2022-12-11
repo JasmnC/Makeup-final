@@ -19,7 +19,6 @@ public class WorkRequest {
     private String status;
     private Date requestDate;
     private Date resolveDate;
-    private String userEmailId;
 
     public WorkRequest() {
         requestDate = new Date();
@@ -72,15 +71,5 @@ public class WorkRequest {
     public void setResolveDate(Date resolveDate) {
         this.resolveDate = resolveDate;
     }
-
-    public String getUserEmailId() {
-        return userEmailId;
-    }
-
-    public void setUserEmailId(String userEmailId) {
-        this.userEmailId = userEmailId;
-    }
-    
-    
-    
+ 
 }
