@@ -11,7 +11,7 @@ package ui.SystemAdmin;
 public class manageEnterprise extends javax.swing.JPanel {
 
     /**
-     * Creates new form manageNetwork
+     * Creates new form manageOrganization
      */
     public manageEnterprise() {
         initComponents();
@@ -30,7 +30,7 @@ public class manageEnterprise extends javax.swing.JPanel {
         jTable1 = new javax.swing.JTable();
         jLabel1 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
-        btnCreateEnterpsrise = new javax.swing.JButton();
+        btnCreateOrg = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
         menuNetwork = new javax.swing.JComboBox<>();
 
@@ -38,13 +38,10 @@ public class manageEnterprise extends javax.swing.JPanel {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null},
-                {null, null},
-                {null, null},
-                {null, null}
+
             },
             new String [] {
-                "Network", "Enterprise"
+                "Network", "Enterprise", "Organization"
             }
         ));
         jScrollPane1.setViewportView(jTable1);
@@ -53,13 +50,13 @@ public class manageEnterprise extends javax.swing.JPanel {
 
         jLabel1.setText("Select Network: ");
         add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 350, -1, 20));
-        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 380, 220, 40));
+        add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 400, 210, 40));
 
-        btnCreateEnterpsrise.setText("Add");
-        add(btnCreateEnterpsrise, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 390, -1, -1));
+        btnCreateOrg.setText("Add");
+        add(btnCreateOrg, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 410, -1, -1));
 
         jLabel2.setText("New Enterprise Name: ");
-        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 390, -1, -1));
+        add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 410, -1, -1));
 
         menuNetwork.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         menuNetwork.addActionListener(new java.awt.event.ActionListener() {
@@ -76,7 +73,7 @@ public class manageEnterprise extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnCreateEnterpsrise;
+    private javax.swing.JButton btnCreateOrg;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JScrollPane jScrollPane1;

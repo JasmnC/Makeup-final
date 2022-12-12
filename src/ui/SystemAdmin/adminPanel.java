@@ -4,6 +4,9 @@
  */
 package ui.SystemAdmin;
 
+import javax.swing.JPanel;
+import model.System.EcoSystem;
+import model.UserAccount.UserAccount;
 import ui.GymMember.*;
 
 /**
@@ -11,12 +14,16 @@ import ui.GymMember.*;
  * @author yuujadz
  */
 public class adminPanel extends javax.swing.JPanel {
+    
+    private JPanel userProcessContainer;
+    private EcoSystem ecoSystem;
+    private UserAccount userAccount; 
 
-    /**
-     * Creates new form memberPanel
-     */
-    public adminPanel() {
+    public adminPanel(JPanel userProcessContainer, UserAccount account, EcoSystem ecosystem) {
         initComponents();
+        this.userProcessContainer = userProcessContainer;
+        this.userAccount = account;
+        this.ecoSystem = ecoSystem;
     }
 
     /**
