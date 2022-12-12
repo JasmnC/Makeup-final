@@ -8,12 +8,12 @@ package ui.Accountant;
  *
  * @author yuujadz
  */
-public class requestPayment extends javax.swing.JPanel {
+public class RequestPayment extends javax.swing.JPanel {
 
     /**
      * Creates new form requestPayment
      */
-    public requestPayment() {
+    public RequestPayment() {
         initComponents();
     }
 

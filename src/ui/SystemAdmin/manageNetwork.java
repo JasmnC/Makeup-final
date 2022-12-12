@@ -8,12 +8,12 @@ package ui.SystemAdmin;
  *
  * @author yuujadz
  */
-public class manageNetwork extends javax.swing.JPanel {
+public class ManageNetwork extends javax.swing.JPanel {
 
     /**
      * Creates new form manageNetwork
      */
-    public manageNetwork() {
+    public ManageNetwork() {
         initComponents();
     }
 

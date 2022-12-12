@@ -2,8 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package ui.GymMember;
+package ui.Cashier;
 
+import ui.GymMember.*;
 import javax.swing.JPanel;
 import model.Enterprise.MemberEnterprise;
 import model.Network.Network;
@@ -15,16 +16,16 @@ import model.UserAccount.UserAccount;
  *
  * @author yuujadz
  */
-public class MemberPanel extends javax.swing.JPanel {
+public class CashierPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form memberPanel
      */
-    public MemberPanel() {
+    public CashierPanel() {
         initComponents();
     }
 
-    public MemberPanel(JPanel userProcessContainer, UserAccount account, WelcomingOrganization welcomingOrganization, MemberEnterprise memberEnterprise, Network network, EcoSystem ecosystem) {
+    public CashierPanel(JPanel userProcessContainer, UserAccount account, WelcomingOrganization welcomingOrganization, MemberEnterprise memberEnterprise, Network network, EcoSystem ecosystem) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

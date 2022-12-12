@@ -2,11 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
  */
-package ui.GymMember;
+package ui.FittnessTester;
 
+import ui.GymMember.*;
 import javax.swing.JPanel;
 import model.Enterprise.MemberEnterprise;
+import model.Enterprise.PhysicalTherapistEnterprise;
 import model.Network.Network;
+import model.Organization.PhisicalCheckOrganization;
 import model.Organization.WelcomingOrganization;
 import model.System.EcoSystem;
 import model.UserAccount.UserAccount;
@@ -15,18 +18,20 @@ import model.UserAccount.UserAccount;
  *
  * @author yuujadz
  */
-public class MemberPanel extends javax.swing.JPanel {
+public class TesterPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form memberPanel
      */
-    public MemberPanel() {
+    public TesterPanel() {
         initComponents();
     }
 
-    public MemberPanel(JPanel userProcessContainer, UserAccount account, WelcomingOrganization welcomingOrganization, MemberEnterprise memberEnterprise, Network network, EcoSystem ecosystem) {
+    public TesterPanel(JPanel userProcessContainer, UserAccount account, PhisicalCheckOrganization phisicalCheckOrganization, PhysicalTherapistEnterprise physicalTherapistEnterprise, Network network, EcoSystem ecosystem) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.

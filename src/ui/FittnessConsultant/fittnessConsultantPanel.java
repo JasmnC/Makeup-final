@@ -4,6 +4,12 @@
  */
 package ui.FittnessConsultant;
 
+import javax.swing.JPanel;
+import model.Enterprise.PhysicalTherapistEnterprise;
+import model.Network.Network;
+import model.Organization.PhisicalCheckOrganization;
+import model.System.EcoSystem;
+import model.UserAccount.UserAccount;
 import ui.GymManager.*;
 import ui.GymMember.*;
 
@@ -18,6 +24,10 @@ public class fittnessConsultantPanel extends javax.swing.JPanel {
      */
     public fittnessConsultantPanel() {
         initComponents();
+    }
+
+    public fittnessConsultantPanel(JPanel userProcessContainer, UserAccount account, PhisicalCheckOrganization phisicalCheckOrganization, PhysicalTherapistEnterprise physicalTherapistEnterprise, Network network, EcoSystem ecosystem) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**

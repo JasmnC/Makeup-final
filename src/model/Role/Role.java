@@ -10,7 +10,7 @@ import model.Network.Network;
 import model.Organization.Organization;
 import model.System.EcoSystem;
 import model.UserAccount.UserAccount;
-import ui.SystemAdmin.adminPanel;
+import ui.SystemAdmin.AdminPanel;
 
 /**
  *
@@ -52,7 +52,7 @@ public abstract class Role {
 
     public JPanel createAdminWorkArea(JPanel userProcessContainer, UserAccount account, EcoSystem ecosystem) {
         this.type = RoleType.SystemAdmin;
-        return new adminPanel(userProcessContainer, account, ecosystem);
+        return new AdminPanel(userProcessContainer, account, ecosystem);
     }
     
     @Override

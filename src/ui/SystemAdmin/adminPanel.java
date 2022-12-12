@@ -13,13 +13,13 @@ import ui.GymMember.*;
  *
  * @author yuujadz
  */
-public class adminPanel extends javax.swing.JPanel {
+public class AdminPanel extends javax.swing.JPanel {
     
     private JPanel userProcessContainer;
     private EcoSystem ecoSystem;
     private UserAccount userAccount; 
 
-    public adminPanel(JPanel userProcessContainer, UserAccount account, EcoSystem ecosystem) {
+    public AdminPanel(JPanel userProcessContainer, UserAccount account, EcoSystem ecosystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
         this.userAccount = account;

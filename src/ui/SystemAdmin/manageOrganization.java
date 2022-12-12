@@ -8,12 +8,12 @@ package ui.SystemAdmin;
  *
  * @author yuujadz
  */
-public class manageOrganization extends javax.swing.JPanel {
+public class ManageOrganization extends javax.swing.JPanel {
 
     /**
      * Creates new form manageOrganization
      */
-    public manageOrganization() {
+    public ManageOrganization() {
         initComponents();
     }
 

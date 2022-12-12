@@ -8,12 +8,12 @@ package ui.Accountant;
  *
  * @author yuujadz
  */
-public class dashboard extends javax.swing.JPanel {
+public class Dashboard extends javax.swing.JPanel {
 
     /**
      * Creates new form dashboard
      */
-    public dashboard() {
+    public Dashboard() {
         initComponents();
     }
 

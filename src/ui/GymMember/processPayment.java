@@ -16,12 +16,12 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author yuujadz
  */
-public class processPayment extends javax.swing.JPanel {
+public class ProcessPayment extends javax.swing.JPanel {
 
     /**
      * Creates new form requestManager
      */
-    public processPayment() {
+    public ProcessPayment() {
         initComponents();
     }
 

@@ -10,12 +10,12 @@ import ui.CoachManager.*;
  *
  * @author yuujadz
  */
-public class accountantPanel extends javax.swing.JPanel {
+public class AccountantPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form coachManagerPanel
      */
-    public accountantPanel() {
+    public AccountantPanel() {
         initComponents();
     }
 
