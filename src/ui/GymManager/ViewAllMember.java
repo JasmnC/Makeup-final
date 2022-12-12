@@ -8,12 +8,12 @@ package ui.GymManager;
  *
  * @author yuujadz
  */
-public class vewAllMember extends javax.swing.JPanel {
+public class ViewAllMember extends javax.swing.JPanel {
 
     /**
      * Creates new form managmentRequest
      */
-    public vewAllMember() {
+    public ViewAllMember() {
         initComponents();
     }
 

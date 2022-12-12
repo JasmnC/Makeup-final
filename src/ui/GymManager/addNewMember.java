@@ -8,12 +8,12 @@ package ui.GymManager;
  *
  * @author yuujadz
  */
-public class addNewMember extends javax.swing.JPanel {
+public class AddNewMember extends javax.swing.JPanel {
 
     /**
      * Creates new form managmentRequest
      */
-    public addNewMember() {
+    public AddNewMember() {
         initComponents();
     }
 

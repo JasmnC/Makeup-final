@@ -4,19 +4,29 @@
  */
 package ui.GymManager;
 
+import javax.swing.JPanel;
+import model.Enterprise.MemberEnterprise;
+import model.Network.Network;
+import model.Organization.WelcomingOrganization;
+import model.System.EcoSystem;
+import model.UserAccount.UserAccount;
 import ui.GymMember.*;
 
 /**
  *
  * @author yuujadz
  */
-public class gymManagerPanel extends javax.swing.JPanel {
+public class GymManagerPanel extends javax.swing.JPanel {
 
     /**
      * Creates new form memberPanel
      */
-    public gymManagerPanel() {
+    public GymManagerPanel() {
         initComponents();
+    }
+
+    public GymManagerPanel(JPanel userProcessContainer, UserAccount account, WelcomingOrganization welcomingOrganization, MemberEnterprise memberEnterprise, Network network, EcoSystem ecosystem) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**

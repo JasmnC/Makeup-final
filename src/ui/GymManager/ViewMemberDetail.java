@@ -17,12 +17,12 @@ import javax.swing.filechooser.FileNameExtensionFilter;
  *
  * @author yuujadz
  */
-public class viewMemberDetail extends javax.swing.JPanel {
+public class ViewMemberDetail extends javax.swing.JPanel {
 
     /**
      * Creates new form requestManager
      */
-    public viewMemberDetail() {
+    public ViewMemberDetail() {
         initComponents();
     }
 
