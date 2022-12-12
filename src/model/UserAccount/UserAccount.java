@@ -73,12 +73,9 @@ public class UserAccount {
         this.orgainization = orgainization;
     }
 
-    public UserAccount() {
-        workQueue= new workQueue();
+    public WorkQueue getWorkQueue() {
+        return workQueue;
     }
 
-    public void setWorkQueue(WorkQueue workQueue) {
-        this.workQueue = workQueue;
-    }
 
 }
