@@ -4,7 +4,11 @@
  */
 package ui.SystemAdmin;
 
+import java.awt.CardLayout;
 import javax.swing.JPanel;
+import model.Enterprise.Enterprise;
+import model.Network.Network;
+import model.Organization.Organization;
 import model.System.EcoSystem;
 import model.UserAccount.UserAccount;
 import ui.GymMember.*;
@@ -19,10 +23,10 @@ public class AdminPanel extends javax.swing.JPanel {
     private EcoSystem ecoSystem;
     private UserAccount userAccount; 
 
-    public AdminPanel(JPanel userProcessContainer, UserAccount account, EcoSystem ecosystem) {
+    public AdminPanel(JPanel userProcessContainer, UserAccount userAccount, EcoSystem ecoSystem) {
         initComponents();
         this.userProcessContainer = userProcessContainer;
-        this.userAccount = account;
+        this.userAccount = userAccount;
         this.ecoSystem = ecoSystem;
     }
 
@@ -36,7 +40,7 @@ public class AdminPanel extends javax.swing.JPanel {
     private void initComponents() {
 
         btnManageNetwork = new javax.swing.JButton();
-        btnManageRole = new javax.swing.JButton();
+        btnManageAccount = new javax.swing.JButton();
         btnManageEnterprise = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         btnManageOrganization = new javax.swing.JButton();
@@ -51,14 +55,14 @@ public class AdminPanel extends javax.swing.JPanel {
         });
         add(btnManageNetwork, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 170, 200, 40));
 
-        btnManageRole.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
-        btnManageRole.setText("Manage Role");
-        btnManageRole.addActionListener(new java.awt.event.ActionListener() {
+        btnManageAccount.setFont(new java.awt.Font("Lucida Grande", 0, 12)); // NOI18N
+        btnManageAccount.setText("Manage Account");
+        btnManageAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnManageRoleActionPerformed(evt);
+                btnManageAccountActionPerformed(evt);
             }
         });
-        add(btnManageRole, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 200, 40));
+        add(btnManageAccount, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 320, 200, 40));
 
         btnManageEnterprise.setText("Manage Enterprise");
         btnManageEnterprise.addActionListener(new java.awt.event.ActionListener() {
@@ -79,27 +83,40 @@ public class AdminPanel extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnManageNetworkActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageNetworkActionPerformed
-        // TODO add your handling code here:
+        ManageNetwork manageNetwork = new ManageNetwork(userProcessContainer, userAccount, ecoSystem);
+        userProcessContainer.add("Manager Network",manageNetwork);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageNetworkActionPerformed
 
     private void btnManageEnterpriseActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageEnterpriseActionPerformed
-        // TODO add your handling code here:
+        ManageEnterprise manageEnterprise = new ManageEnterprise(userProcessContainer, userAccount, ecoSystem);
+        userProcessContainer.add("Manager Enterprise",manageEnterprise);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+
     }//GEN-LAST:event_btnManageEnterpriseActionPerformed
 
-    private void btnManageRoleActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageRoleActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_btnManageRoleActionPerformed
+    private void btnManageAccountActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageAccountActionPerformed
+        ManageAccount manageAccount = new ManageAccount(userProcessContainer, userAccount, ecoSystem);
+        userProcessContainer.add("Manager Account",manageAccount);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
+    }//GEN-LAST:event_btnManageAccountActionPerformed
 
     private void btnManageOrganizationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnManageOrganizationActionPerformed
-        // TODO add your handling code here:
+        ManageOrganization manageOrg = new ManageOrganization(userProcessContainer, userAccount, ecoSystem);
+        userProcessContainer.add("Manager Organization",manageOrg);
+        CardLayout layout = (CardLayout) userProcessContainer.getLayout();
+        layout.next(userProcessContainer);
     }//GEN-LAST:event_btnManageOrganizationActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnManageAccount;
     private javax.swing.JButton btnManageEnterprise;
     private javax.swing.JButton btnManageNetwork;
     private javax.swing.JButton btnManageOrganization;
-    private javax.swing.JButton btnManageRole;
     private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }

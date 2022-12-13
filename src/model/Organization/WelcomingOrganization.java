@@ -5,6 +5,7 @@
 package model.Organization;
 
 import java.util.ArrayList;
+import model.Role.GymManagerRole;
 import model.Role.Role;
 
 /**
@@ -19,7 +20,9 @@ public class WelcomingOrganization extends Organization {
 
     @Override
     public ArrayList<Role> getSupportedRole() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ArrayList<Role> roles = new ArrayList<>();
+        roles.add(new GymManagerRole());
+        return roles;
     }
     
 }

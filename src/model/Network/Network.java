@@ -4,6 +4,8 @@
  */
 package model.Network;
 
+import model.System.*;
+import model.Network.*;
 import model.Enterprise.EnterpriseDirectory;
 import model.System.EcoSystem;
 import model.WorkQueue.WorkQueue;

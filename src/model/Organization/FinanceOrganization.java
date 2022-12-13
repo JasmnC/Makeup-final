@@ -5,6 +5,8 @@
 package model.Organization;
 
 import java.util.ArrayList;
+import model.Role.AccountantRole;
+import model.Role.CashierRole;
 import model.Role.Role;
 
 /**
@@ -19,7 +21,10 @@ public class FinanceOrganization extends Organization {
 
     @Override
     public ArrayList<Role> getSupportedRole() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        ArrayList<Role> roles = new ArrayList<>();
+        roles.add(new AccountantRole());
+        roles.add(new CashierRole());
+        return roles;
     }
     
 }

@@ -4,18 +4,24 @@
  */
 package ui.SystemAdmin;
 
+import javax.swing.JPanel;
+import model.System.EcoSystem;
+import model.UserAccount.UserAccount;
+
 /**
  *
  * @author yuujadz
  */
 public class ManageNetwork extends javax.swing.JPanel {
 
+    ManageNetwork(JPanel userProcessContainer, UserAccount userAccount, EcoSystem ecoSystem) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
     /**
      * Creates new form manageNetwork
      */
-    public ManageNetwork() {
-        initComponents();
-    }
+
 
     /**
      * This method is called from within the constructor to initialize the form.

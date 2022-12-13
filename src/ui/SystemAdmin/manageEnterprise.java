@@ -4,6 +4,10 @@
  */
 package ui.SystemAdmin;
 
+import javax.swing.JPanel;
+import model.System.EcoSystem;
+import model.UserAccount.UserAccount;
+
 /**
  *
  * @author yuujadz
@@ -15,6 +19,10 @@ public class ManageEnterprise extends javax.swing.JPanel {
      */
     public ManageEnterprise() {
         initComponents();
+    }
+
+    ManageEnterprise(JPanel userProcessContainer, UserAccount userAccount, EcoSystem ecoSystem) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
