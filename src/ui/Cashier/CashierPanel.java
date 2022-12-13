@@ -6,8 +6,10 @@ package ui.Cashier;
 
 import ui.GymMember.*;
 import javax.swing.JPanel;
+import model.Enterprise.FinanceEnterprise;
 import model.Enterprise.MemberEnterprise;
 import model.Network.Network;
+import model.Organization.FinanceOrganization;
 import model.Organization.WelcomingOrganization;
 import model.System.EcoSystem;
 import model.UserAccount.UserAccount;
@@ -25,9 +27,11 @@ public class CashierPanel extends javax.swing.JPanel {
         initComponents();
     }
 
-    public CashierPanel(JPanel userProcessContainer, UserAccount account, WelcomingOrganization welcomingOrganization, MemberEnterprise memberEnterprise, Network network, EcoSystem ecosystem) {
+    public CashierPanel(JPanel userProcessContainer, UserAccount account, FinanceOrganization financeOrganization, FinanceEnterprise financeEnterprise, Network network, EcoSystem ecosystem) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+
 
     /**
      * This method is called from within the constructor to initialize the form.

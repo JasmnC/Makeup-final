@@ -4,6 +4,13 @@
  */
 package ui.Accountant;
 
+import javax.swing.JPanel;
+import model.Enterprise.FinanceEnterprise;
+import model.Enterprise.TrainingEnterprise;
+import model.Network.Network;
+import model.Organization.FinanceOrganization;
+import model.System.EcoSystem;
+import model.UserAccount.UserAccount;
 import ui.CoachManager.*;
 
 /**
@@ -17,6 +24,10 @@ public class AccountantPanel extends javax.swing.JPanel {
      */
     public AccountantPanel() {
         initComponents();
+    }
+
+    public AccountantPanel(JPanel userProcessContainer, UserAccount account, FinanceOrganization financeOrganization, FinanceEnterprise financeEnterprise, Network network, EcoSystem ecosystem) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**

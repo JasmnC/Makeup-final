@@ -7,7 +7,9 @@ package ui.PersonalTrainer;
 import ui.GymMember.*;
 import javax.swing.JPanel;
 import model.Enterprise.MemberEnterprise;
+import model.Enterprise.TrainingEnterprise;
 import model.Network.Network;
+import model.Organization.PersonaTrainerOrganization;
 import model.Organization.WelcomingOrganization;
 import model.System.EcoSystem;
 import model.UserAccount.UserAccount;
@@ -25,9 +27,10 @@ public class PersonalTrainerPanel extends javax.swing.JPanel {
         initComponents();
     }
 
-    public PersonalTrainerPanel(JPanel userProcessContainer, UserAccount account, WelcomingOrganization welcomingOrganization, MemberEnterprise memberEnterprise, Network network, EcoSystem ecosystem) {
+    public PersonalTrainerPanel(JPanel userProcessContainer, UserAccount account, PersonaTrainerOrganization personaTrainerOrganization, TrainingEnterprise trainingEnterprise, Network network, EcoSystem ecosystem) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
 
     /**
      * This method is called from within the constructor to initialize the form.

@@ -4,6 +4,13 @@
  */
 package ui.CoachManager;
 
+import javax.swing.JPanel;
+import model.Enterprise.TrainingEnterprise;
+import model.Network.Network;
+import model.Organization.ManagementOrganization;
+import model.System.EcoSystem;
+import model.UserAccount.UserAccount;
+
 /**
  *
  * @author yuujadz
@@ -15,6 +22,10 @@ public class coachManagerPanel extends javax.swing.JPanel {
      */
     public coachManagerPanel() {
         initComponents();
+    }
+
+    public coachManagerPanel(JPanel userProcessContainer, UserAccount account, ManagementOrganization managementOrganization, TrainingEnterprise trainingEnterprise, Network network, EcoSystem ecosystem) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     /**
